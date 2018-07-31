@@ -20,6 +20,11 @@ recipesChanged = new Subject<Recipe[]>();
       new Ingredient('Meat', 1)
   ])
 ];
+
+setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+}
 getRecipes(){
     return this.recipes.slice();
 }
