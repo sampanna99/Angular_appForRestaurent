@@ -21,6 +21,9 @@ constructor(private dataStorageService: DataStorageService, private authService:
     onFetchData(){
         this.dataStorageService.getRecipes();
     }
+    onLogout(){
+        this.authService.logout();
+    }
     // isAuth(){
     //      return this.authService.isAuthenticated();
     // }
